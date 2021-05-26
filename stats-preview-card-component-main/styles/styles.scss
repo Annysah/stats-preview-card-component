@@ -1,0 +1,114 @@
+@import 'variables';
+@import 'media';
+
+body {
+    background: $very-db;
+    box-sizing: border-box;
+}
+
+main {
+    background: $dark-blue;
+    max-width: 800px;
+    margin: 100px auto;
+
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row-reverse;
+        margin: 150px 100px;
+        max-width: 1200px;
+    }
+}
+
+.container-one {
+    //height: 400px;
+    width: 100%;
+    background: $violet;
+    overflow: hidden;   
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    @include desktop {
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 10px;
+    }
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+
+    @include desktop {
+        //object-fit: cover;
+        height: 450px;
+    }
+}
+
+.container-two {
+    text-align: center;
+
+    //@include desktop {
+     //   padding: 1rem 1.5rem;
+    //}
+}
+
+h1 {
+    font-family: $font-two;
+    color: $light;
+
+    @include desktop {
+        text-align: left;
+        padding: 0 5rem;
+    }
+}
+
+span{
+    color: $violet;
+}
+
+p {
+    font-family: $font-one;
+    color: $para-light;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 0 1.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 2;
+    letter-spacing: 1px;
+
+    @include desktop {
+        text-align: left;
+        padding: 0 1.2rem 0 4.8rem;
+        margin-top: 2.5rem;
+    }
+}
+
+.stats {
+    line-height: 1.7;
+    padding-bottom: 1rem;
+
+    &-header {
+        color: $light;
+        font-family: $font-one;
+    }
+
+    &-para {
+        color: $stat-light;
+        text-transform: uppercase;
+        font-family: $font-two;
+
+        @include desktop {
+            padding: 0 1rem;
+        }
+    }       
+
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        line-height: 0.5;
+    }
+}
+
